@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'css/e1.css' %}" rel="stylesheet">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+       
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: red; */
+    color: white;
+    font-size: 20px;
+
+
+}
+#eventy{
+    /* margin-top: 30%;*/
+    margin-left: 30%; 
+    margin: 20% auto;
+    width: 500px;
+    /* background-color: tomato; */
+}
+#h{
+
+}
+#img_id{
+    color:red;
+    font-size: large;
+}
+#cont{
+    margin-top: ;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="eventy">
+    <button class="btn btn-primary" id="h">Create Event</button>
+    <div id="cont"></div>
+    </div>
+    </div>
+    
+    
+    
+</body>
+<script>
+   var h = document.getElementById("h");
+   var cont = document.getElementById("cont");
+   //var isLiked = document.getElementById("heart");
+   var save;
+    h.onclick = ()=>{
+        var ev_name = document.createElement("input");
+        var data = document.createElement("textarea");
+        var time = document.createElement("input");
+        var location = document.createElement("textarea");
+        var img = document.createElement("input");
+    
+        save = document.createElement("input");
+        
+        ev_name.type = "text";
+        ev_name.name = "inp";
+        ev_name.id = "inp_id";
+        ev_name.placeholder = "Event Name";
+        cont.appendChild(ev_name);
+
+        data.type = "text";
+        data.name = "inp";
+        data.id = "inp_id";
+        data.placeholder = "data";
+        cont.appendChild(data);
+
+        time.type = "text";
+        time.name = "inp";
+        time.id = "inp_id";
+        time.placeholder = "Time";
+        cont.appendChild(time);
+
+        location.type = "text";
+        location.name = "inp";
+        location.id = "inp_id";
+        location.placeholder = "Location";
+        cont.appendChild(location);
+
+        img.type = "file";
+        img.name = "image";
+        img.id = "img_id";
+        img.placeholder = "Image";
+        cont.appendChild(img);
+
+        save.type = "button";
+        save.value = "save";
+        save.className = "btn btn-success";
+        cont.appendChild(save);
+        
+        save.onclick = ()=>{
+            alert(ev_name.value);
+        }
+    }
+    
+
+    
+</script>
+</html>
